@@ -8,15 +8,12 @@ function App() {
 
   return (
     <>
-      
       <h2>App.jsx-page</h2>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR </p>
-          <p> src/App.jsx を編集して HMR をテストするために保存します</p>
+          <p> <code>src/App.jsx </code>を編集して HMR をテストするために保存します</p>
           <p>「Hot Module Replacement」リロードなしに変更内容を確認できる。</p>
       </div>
       <p className="read-the-docs">
