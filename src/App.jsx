@@ -11,7 +11,7 @@ function App() {
       <h2>App.jsx-page</h2>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        押しボタンカウンター {count}
         </button>
           <p> <code>src/App.jsx </code>を編集して HMR をテストするために保存します</p>
           <p>「Hot Module Replacement」リロードなしに変更内容を確認できる。</p>
