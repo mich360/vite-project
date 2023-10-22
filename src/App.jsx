@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <h2>App.jsx-page</h2>
-      <p> <code>src/App.jsx </code>を編集保存して HMR をテストする。</p>
+      <p><code>src/App.jsx </code>を編集保存して HMR をテストする</p>
       <div className="card">
       押しボタンカウンター&emsp;
         <button onClick={() => setCount((count) => count + 1)}>
