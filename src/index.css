@@ -60,9 +60,9 @@ button:focus-visible {
 }
 
 header {
-  /* background-color: var(--primary-color); */
+  background-color: var(--primary-color);
   padding: 20px;
-  /* text-align: center; */
+  text-align: center;
 }
 
 @media (prefers-color-scheme: light) {
