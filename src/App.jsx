@@ -9,12 +9,13 @@ function App() {
   return (
     <>
       <h2>App.jsx-page</h2>
+      <p> <code>src/App.jsx </code>を編集保存して HMR をテストする。</p>
       <div className="card">
-      押しボタンカウンター
+      押しボタンカウンター&emsp;
         <button onClick={() => setCount((count) => count + 1)}>
           {count}
         </button>
-          <p> <code>src/App.jsx </code>を編集保存して HMR をテストする。</p>
+         
           <p>リロードなしに変更内容を確認できる。「Hot Module Replacement !」</p>
       </div>
       <p className="read-the-docs">
