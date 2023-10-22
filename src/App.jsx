@@ -10,11 +10,12 @@ function App() {
     <>
       <h2>App.jsx-page</h2>
       <div className="card">
+      押しボタンカウンター
         <button onClick={() => setCount((count) => count + 1)}>
-        押しボタンカウンター {count}
+          {count}
         </button>
-          <p> <code>src/App.jsx </code>を編集して HMR をテストするために保存します</p>
-          <p>「Hot Module Replacement」リロードなしに変更内容を確認できる。</p>
+          <p> <code>src/App.jsx </code>を編集保存して HMR をテストする。</p>
+          <p>リロードなしに変更内容を確認できる。「Hot Module Replacement !」</p>
       </div>
       <p className="read-the-docs">
       詳細については、Vite および React のロゴをクリックしてください。
