@@ -4,19 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <style>
-      body{
-        background-color: rgb(221, 219, 242);}
-      #root{
-        background-color: rgb(141, 154, 182);
-      }  
-    </style> -->
     <title>Vite-Project</title>
   </head>
   <body>
     <header>
       <nav>
-        <span style="text-align: left;font-size: 30px;">Home</span>&emsp;&emsp;
+        <span>Home</span>&emsp;&emsp;
           &emsp;<a href="canape.html">public-canape</a>&emsp;|
           &emsp;<a href="index.html">public-index</a>&emsp;|
           &emsp;<a href="/">Home</a>&emsp;|
@@ -24,6 +17,13 @@
       </nav>
      </header>
     <h1>Vite-Indx-page</h1>
+    <p id="datetime">現在の日時: Loading...</p>
+      <div id="image-container"></div>
+       <!-- 新しいページへのリンクを追加 -->
+    <a href="canape.html">Go to Canape Page</a>
+      　　　　 <!-- 通常のアンカータグを使用してリンクを作成 -->
+      <a href="https://canape2020.stars.ne.jp/">Some Text</a>
+    
     <p>ここは
       <br>Webサイト制作ではおなじみのindex.htmlファイルですね。
       <br>Projectを開くとWebサイトの最初のページが表示されます。Webページの title や言語の指定はこちらから書き換えます。
@@ -40,5 +40,14 @@
     <div id="root"></div>
     
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // JavaScript を使用して日時を取得
+      const currentDate = new Date();
+      const formattedDate = currentDate.toLocaleString();
+
+      // 日時を表示する要素に挿入
+      const datetimeElement = document.getElementById("datetime");
+      datetimeElement.textContent = `現在の日時: ${formattedDate}`;
+    </script>
   </body>
 </html>
