@@ -65,7 +65,9 @@ header {
   padding: 20px;
   text-align: center;
 }
-
+span{
+  text-align: left;font-size: 30px;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
