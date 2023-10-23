@@ -19,10 +19,14 @@
     
     <h1>public-index</h1>
     <div id="root"></div>
+    <!-- queen.png を表示する img タグ -->
+    <img src="images/queen.png" alt="Queen Image">
     <img src="/assets/queen.png" alt="Queen Image" />
+
+    
     <script type="module">
-        import { h, render } from 'preact';
-        import { Canape } from '/src/canape.jsx'; // パスの先頭にスラッシュを追加
+        // import { h, render } from 'preact';
+        // import { Canape } from '/src/canape.jsx'; // パスの先頭にスラッシュを追加
     
         render(<Canape />, document.getElementById('root'));
     </script>
