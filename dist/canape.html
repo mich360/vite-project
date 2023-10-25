@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canape Page</title>
+    <link rel="stylesheet" href="./canape.css"> 
+</head>
+<body>
+    <header>
+        <nav>
+            &emsp;<a href="/">Home</a>&emsp;|
+            &emsp;<a href="index.html">public-index</a>&emsp;|
+            &emsp;<a href="canape.html">Canape</a>&emsp;|
+            &emsp;<a href="#">Contact</a>&emsp;|
+        </nav>
+      </header>
+    <h1>まずは</h1>
+    <article>
+        
+        <p>このページ編集するには
+          <br></p>
+          <code>vite/public/canape.html</code> 
+    </article>
+    <pre>
+                コマンドライン実行履歴
+
+        
+                    % node -v   確認
+                    v18.17.0
+
+                    % cd documents
+
+                    % mkdir vite
+
+                    % cd vite
+
+                    % npm create vite@latest
+
+                    ✔ Project name: … vite
+                    ✔ Select a framework: › React　 Preact選べる
+                    ✔ Select a variant: › JavaScript
+
+
+
+                    Done. Now run:
+
+                    cd vite
+
+                    npm install
+
+                    npm run dev
+
+                    
+                    #プロジェクトの場所は
+                    vite % pwd
+                                /Users/naomichimasumoto/documents/vite/vite
+                    
+                    #起動　vscode の プラトホームのターミナル で       
+                                npm run dev
+
+    </pre>
+    <p><a href="https://www.webcreatorbox.com/tech/vite-react"> ViteでReacts参考web</a></p>
+
+
+
+
+
+
+    <!-- <div id="app"></div>
+    
+<script type="module">
+    import { h, render } from 'preact';
+
+    // import { h, render } from '.vite/node_modules/preact/dist/preact.module.js';
+    import { Canape } from './canape.jsx';
+
+    render(<Canape />, document.getElementById('root'));
+</script> -->
+
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canape Page</title>
+    <link rel="stylesheet" href="./canape.css">  Canape.css を読み
+</head>
+<body>
+    <div id="app"></div>
+
+    <script type="module">
+
+// ここでコンポーネントをレンダリングするなどの処理を行う
+
+        import { h, render } from './vite/node_modules/preact/dist/preact.module.js';  // preact のモジュールのパスに置き換えてください
+        import Canape from './Canape.jsx';  // Canape.jsx のパスに置き換えてください
+
+        const root = document.getElementById('app');
+        render(h(Canape), root);
+    </script>
+</body>
+</html> -->
