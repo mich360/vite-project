@@ -15,13 +15,146 @@
             &emsp;<a href="#">Contact</a>&emsp;|
         </nav>
       </header>
-      
+      <p><a href="https://canape2020.stars.ne.jp/"><img src="images/canape.png" width="500px" alt="Canape Image"></a>Go to Canape-Page </p>
+                <!-- .png を表示する img タグ -->
+    <h1>Start まずは</h1>            
+    <article>
+        <div id="root"></div>
+        <script type="module">
+            import React from 'react';
+            import ReactDOM from 'react-dom';
+            import Canape from './src/canape'; // 正しい相対パスを指定
+
+            
+            ReactDOM.render(<Canape />, document.getElementById('root'));
+        </script>
+    </article>
+   
+    <article>
+        <!-- 以下に説明が続きます -->
+        <article>
+        
+        
+   
+            <div id="pre">
+                <p>このページ編集するには  :   
+                     <code>vite(project名)/public/canape.html</code> </p>
+                     <pre>
+                    
+コマンドライン実行履歴
+% node -v   v18.17.0     確認
+% cd documents % mkdir vite % cd vite      
+
+% npm create vite@latest(Vite入れる)
+        </pre></div>
+        <p>npm create vite@latest というコマンドで、Viteを用いる</p>
+        <ul>
+        <li>npm は、Node.jsのパッケージ管理ツールで、JavaScriptのパッケージ（ライブラリやツールなど）をインストール・管理します。</li>
+        <li>create は、npm の標準スクリプトで、新しいプロジェクトを作成するために使用されます。</li>
+        <li>vite@latest は、Viteパッケージを最新バージョンでインストールする指定です。@latest は最新バージョンを意味します。</li>
+        </ul>
+        <div id="pre">
+        <pre>
+✔ Project name: … vite
+✔ Select a framework: › React　 Preact選べる
+✔ Select a variant: › JavaScript
+Done. Now run:
+cd vite
+npm install
+npm run dev
+
+
+#プロジェクトの場所は :  
+
+vite % pwd  
+            
+#起動　vscode の プラトホームのターミナル で       
     
-    <h1>public-start</h1>
-  
-    <!-- queen.png を表示する img タグ -->
-    <img src="images/queen.png" alt="Queen Image">
-    
+npm run dev
+        
+            </pre>
+        </div>
+        </article>
+            <p><a href="https://www.webcreatorbox.com/tech/vite-react"> ViteでReacts参考web</a></p>
+         <article>
+                <div id="pre">
+                    <p>public フォルダ内に index.html を配置する場合:   
+                    <br>これは、 一般的です通常、静的な HTML ページとして使用されます。
+                    <br>React コンポーネントは、この HTML ページの特定の要素内にマウントされます。</p>
+                    <pre><code>
+html code
+
+&lt;body>
+&lt;div id="app">&lt;/div>
+&lt;script type="module" src="/src/main.js">&lt;/script>
+&lt;/body>
+&lt;/html>
+
+                        </code> </pre>
+                　　　<p>src フォルダ内に index.html ファイルを作成場合:
+        　　　　　　　　　<br>これは通常、ウェブアプリケーションのメインの HTML ファイルとなります。
+        　　　　　　　　　<br>ここには React コンポーネントがレンダリングされる場所も含まれます。
+        　　　　　　　　　<br>React コンポーネントを index.html に挿入し、
+                       <br>それを ReactDOM.render() を使用してルート要素にマウントします。たとえば:</p>
+        　　　　　　　　　　<pre><code>
+html code
+
+&lt;div id="app">  &lt;/div>
+&lt;script type="module">
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(  &lt;App />, document.getElementById('app'));
+&lt;/script>
+        　　　　　　　　　　</code></pre>
+        <p>src フォルダ内の他の React コンポーネントや JavaScript ファイルをインポートし、index.html に統合することができます。
+        
+        Vite のビルドプロセスを使用してプロジェクトをビルドし、ブラウザで表示します。
+        </p>
+        <pre><code> npm run build</code> </pre>
+        このコマンドを実行すると、Vite はプロジェクトをビルドし、本番用の最適化されたコードを生成します。デフォルトでは、ビルドしたファイルは dist フォルダ内に保存されます。
+        
+        ビルド結果の確認:
+        
+        ビルドが正常に完了したら、ビルド結果を確認しましょう。dist フォルダ内に生成されたファイルが本番用のアプリケーションです。
+                </div>
+                <div id="pre">  
+                 
+                    <pre><code>   
+&lt;script type="module">
+import { h, render } from 'preact';
+
+// import { h, render } from '.vite/node_modules/preact/dist/preact.module.js';
+import { Canape } from './canape.jsx';
+
+render(<Canape />, document.getElementById('root'));
+&lt;/script> 
+                    </code></pre>
+                    <p>
+                        このコードは、Preactというライブラリを使用して単純なWebページを作成するためのものです。以下はコードの要点と説明です</p>
+                    <dl>
+                        <dt> &lt;script type="module">:</dt>
+                        <dd>この要素は、ES6モジュールを使用することを示します。ES6モジュールは、JavaScriptコードをモジュールとして読み込むための方法です。</dd>
+                        <dt>import { h, render } from 'preact';:</dt>
+                        <dd>Preactライブラリから、h（仮想DOM要素を作成するための関数）とrender（仮想DOMを実際のDOMにレンダリングするための関数）をインポートしています。</dd>
+                        <dt>import { Canape } from './canape.jsx';:</dt>
+                        <dd>プロジェクト内の canape.jsx ファイルから Canape コンポーネントをインポートしています。</dd>
+                        <dt>render( &lt;Canape />, document.getElementById('root'));:</dt>
+                        <dd>Canape コンポーネントを  &lt;div id="root">&lt;/div> 要素にレンダリングしています。</dd>
+                    <dd>render 関数を使用して、仮想DOMを実際のDOMに描画します。
+                    <br>このコードは、Preactを使用して定義されたコンポーネントをブラウザで表示するための非常に基本的な例です。Canape コンポーネントはページ内のどこかに描画され、 &lt;div id="root"> &lt;/div> 要素内に表示されることになります。この方法を使用することで、Preactを始めるための基本的な構造を理解できます。</dd>
+                        </dl>
+        
+        
+        
+        
+                
+        
+        
+        
+                </div>
+    </article>
 
     
 </body>
