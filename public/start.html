@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>start Page</title>
+    <link rel="stylesheet" href="./canape.css"> 
+</head>
+<body>
+    <header>
+        <nav>
+            &emsp;<a href="canape.html">Canape</a>&emsp;|
+            &emsp;<a href="/">Home</a>&emsp;|
+            &emsp;<a href="index.html">public-index</a>&emsp;|
+            &emsp;<a href="#">Contact</a>&emsp;|
+        </nav>
+      </header>
+      
+    
+    <h1>public-index</h1>
+    <div id="root"></div>
+    <!-- queen.png を表示する img タグ -->
+    <img src="images/queen.png" alt="Queen Image">
+    
+
+    
+    <script type="module">
+        // import { h, render } from 'preact';
+        // import { Canape } from '/src/canape.jsx'; // パスの先頭にスラッシュを追加
+    
+        render(<Canape />, document.getElementById('root'));
+    </script> 
+    
+</body>
+</html>
