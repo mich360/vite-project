@@ -10,7 +10,7 @@ body {
   
   /* カラースキーム */
   :root {
-    --primary-color: #00a0e4; /* 鮮やかな青 */
+    --primary-color: #7dc1de; /* 鮮やかな青 */
     --secondary-color: #ffd700; /* 金色 */
     --text-color: #24254d; /* 白色 */
   }
