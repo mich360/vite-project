@@ -57,3 +57,17 @@ body {
   a{
     color: antiquewhite;
   }
+  header{
+    outline: 8px ridge rgba(5, 90, 127, 0.6);
+    border-radius: 1rem;
+    width: auto;
+    background-color: rgba(5, 90, 127, 0.6);
+  }
+  #pre{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid coral;
+    background-color: antiquewhite;
+  }
+  
