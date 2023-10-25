@@ -52,22 +52,22 @@
         </ul>
         <div id="pre">
         <pre>
-        ✔ Project name: … vite
-        ✔ Select a framework: › React　 Preact選べる
-        ✔ Select a variant: › JavaScript
-        Done. Now run:
-        cd vite
-        npm install
-        npm run dev
-        
-        
-        #プロジェクトの場所は :  
-        
-        vite % pwd  
-                    
-        #起動　vscode の プラトホームのターミナル で       
+✔ Project name: … vite
+✔ Select a framework: › React　 Preact選べる
+✔ Select a variant: › JavaScript
+Done. Now run:
+cd vite
+npm install
+npm run dev
+
+
+#プロジェクトの場所は :  
+
+vite % pwd  
             
-        npm run dev
+#起動　vscode の プラトホームのターミナル で       
+    
+npm run dev
         
             </pre>
         </div>
@@ -79,14 +79,14 @@
                     <br>これは、 一般的です通常、静的な HTML ページとして使用されます。
                     <br>React コンポーネントは、この HTML ページの特定の要素内にマウントされます。</p>
                     <pre><code>
-                        html code
-        
-                            &lt;body>
-                            &lt;div id="app">&lt;/div>
-                            &lt;script type="module" src="/src/main.js">&lt;/script>
-                            &lt;/body>
-                            &lt;/html>
-                            
+html code
+
+&lt;body>
+&lt;div id="app">&lt;/div>
+&lt;script type="module" src="/src/main.js">&lt;/script>
+&lt;/body>
+&lt;/html>
+
                         </code> </pre>
                 　　　<p>src フォルダ内に index.html ファイルを作成場合:
         　　　　　　　　　<br>これは通常、ウェブアプリケーションのメインの HTML ファイルとなります。
@@ -94,16 +94,16 @@
         　　　　　　　　　<br>React コンポーネントを index.html に挿入し、
                        <br>それを ReactDOM.render() を使用してルート要素にマウントします。たとえば:</p>
         　　　　　　　　　　<pre><code>
-                            html code
-        
-                            &lt;div id="app">  &lt;/div>
-                            &lt;script type="module">
-                            import React from 'react';
-                            import ReactDOM from 'react-dom';
-                            import App from './App';
-        
-                            ReactDOM.render(  &lt;App />, document.getElementById('app'));
-                            &lt;/script>
+html code
+
+&lt;div id="app">  &lt;/div>
+&lt;script type="module">
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(  &lt;App />, document.getElementById('app'));
+&lt;/script>
         　　　　　　　　　　</code></pre>
         <p>src フォルダ内の他の React コンポーネントや JavaScript ファイルをインポートし、index.html に統合することができます。
         
@@ -119,14 +119,14 @@
                 <div id="pre">  
                  
                     <pre><code>   
-                        &lt;script type="module">
-                            import { h, render } from 'preact';
-                        
-                            // import { h, render } from '.vite/node_modules/preact/dist/preact.module.js';
-                            import { Canape } from './canape.jsx';
-                        
-                            render(<Canape />, document.getElementById('root'));
-                        &lt;/script> 
+&lt;script type="module">
+import { h, render } from 'preact';
+
+// import { h, render } from '.vite/node_modules/preact/dist/preact.module.js';
+import { Canape } from './canape.jsx';
+
+render(<Canape />, document.getElementById('root'));
+&lt;/script> 
                     </code></pre>
                     <p>
                         このコードは、Preactというライブラリを使用して単純なWebページを作成するためのものです。以下はコードの要点と説明です。
