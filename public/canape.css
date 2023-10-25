@@ -1,7 +1,7 @@
 /* 背景画像の設定 */
 body {
     margin-left: 50px;
-    background-image: url('beach.jpg');
+    /* background-image: url('beach.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
