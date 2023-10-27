@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./public/canape.css"> -->
     <title>Vite-Project</title>
   </head>
   <body>
@@ -24,7 +25,7 @@
     <br><img src="./public/images/queen.png" alt="Queen Image"></p>
 
              <!-- 新しいページへのリンクを追加 -->
-    <span>projact内リンクしてみよう<a href="canape.html">Go to p-canape Page</a></span>
+    <span>projact内リンクしてみよう<a id="canape" href="canape.html">Go to p-canape Page</a></span>
     <br><span>アンカータグを使用して外部リンク<a href="https://canape2020.stars.ne.jp/">Canapeでお寛ぎ!</a></span>
 <p>ここは
       <br>Webサイト制作ではおなじみのindex.htmlファイルですね。
@@ -45,5 +46,21 @@
       const datetimeElement = document.getElementById("datetime");
       datetimeElement.textContent = `現在の日時: ${formattedDate}`;
     </script>
+    
+
+    <script type="module">
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+      import App from './src/App'; // Appコンポーネントのパスを正しく指定
+      import './src/index.css'; // index.css のパスを正しく指定
+
+      ReactDOM.render(
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>,
+        document.getElementById('root') // Reactコンポーネントを描画する要素のID
+      );
+    </script>
+
   </body>
 </html>
