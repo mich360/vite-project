@@ -1,0 +1,74 @@
+/* 背景画像の設定 */
+body {
+    margin-left: 50px;
+    /* background-image: url('beach.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+  }
+  
+  /* カラースキーム */
+  :root {
+    --primary-color: #7dc1de; /* 鮮やかな青 */
+    --secondary-color: #ffd700; /* 金色 */
+    --text-color: #24254d; /* 白色 */
+  }
+  body {
+    background-color: var(--primary-color); /* 背景カラーを --primary-color に設定 */
+    color: var(--text-color); /* テキストカラーを --text-color に設定 */
+}
+
+.button {
+    background-color: var(--secondary-color); /* ボタンの背景カラーを --secondary-color に設定 */
+}
+
+  /* フォント設定 */
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* ヘッダースタイル */
+  header {
+    /* background-color: var(--primary-color); */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    color: var(--text-color);
+    font-size: 36px;
+  }
+  
+  /* ボタンスタイル */
+  button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ff8c00; /* オレンジ色 */
+  }
+  a{
+    color: antiquewhite;
+  }
+  header{
+    outline: 8px ridge rgba(5, 90, 127, 0.6);
+    border-radius: 1rem;
+    width: auto;
+    background-color: rgba(5, 90, 127, 0.6);
+  }
+  #pre{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+    border: 1px solid coral;
+    background-color: antiquewhite;
+  }
+  
