@@ -37,7 +37,16 @@
 .card {
   padding: 2em;
 }
-
+.canape{
+  max-width: 400px;
+margin-left: auto;
+margin-right: auto;
+/* border: 1px solid coral; */
+  /* background: yellow; */
+  text-align: center;
+  max-height: aute;
+  
+}
 .read-the-docs {
-  color: #e7e7b4a2;
+  color: #4431e8a2;
 }
