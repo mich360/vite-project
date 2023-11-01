@@ -1,7 +1,7 @@
 /* 背景画像の設定 */
 body {
     margin-left: 50px;
-    background-image: url('beach.jpg');
+    /* background-image: url('beach.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -10,7 +10,7 @@ body {
   
   /* カラースキーム */
   :root {
-    --primary-color: #00a0e4; /* 鮮やかな青 */
+    --primary-color: #7dc1de; /* 鮮やかな青 */
     --secondary-color: #ffd700; /* 金色 */
     --text-color: #24254d; /* 白色 */
   }
@@ -57,3 +57,18 @@ body {
   a{
     color: antiquewhite;
   }
+  header{
+    outline: 8px ridge rgba(5, 90, 127, 0.6);
+    border-radius: 1rem;
+    width: auto;
+    background-color: rgba(5, 90, 127, 0.6);
+  }
+  #pre{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+    border: 1px solid coral;
+    background-color: antiquewhite;
+  }
+  
