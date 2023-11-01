@@ -1,35 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canape Page</title>
-    <link rel="stylesheet" href="./canape.css"> 
-</head>
-<body>
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite-Project</title>
+    <script type="module" crossorigin src="./assets/index-372be7d2.js"></script>
+    <link rel="stylesheet" href="./assets/index-6efdd91c.css">
+  </head>
+  <body>
     <header>
-        <nav>
-            &emsp;<a href="canape.html">Canape</a>&emsp;|
-            &emsp;<a href="/">Home</a>&emsp;|
-            &emsp;<a href="index.html">public-index</a>&emsp;|
-            &emsp;<a href="#">Contact</a>&emsp;|
-        </nav>
-      </header>
-      
-    
-    <h1>public-index</h1>
+      <nav>
+        <span>Home</span>
+          &emsp;<a href="canape.html">canape</a>&emsp;|
+          &emsp;<a href="start.html">start</a>&emsp;|
+          <!-- &emsp;<a href="/">Home</a>&emsp;| -->
+          <!-- &emsp;<a href="#">Contact</a>&emsp;| -->
+      </nav>
+     </header>
+    <h1>Vite-Indx-page</h1>
+    <span>JavaScript を使用して</span>
+    <p id="datetime">現在の日時: Loading...</p>
+
+    <p><span>画像を表示してみた</span>　　　　　　<!-- queen.png を表示する img タグ -->
+    <br><img src="./assets/queen-a1d03248.png" alt="Queen Image"></p>
+
+             <!-- 新しいページへのリンクを追加 -->
+    <span>projact内リンクしてみよう<a id="canape" href="canape.html">Go to p-canape Page</a></span>
+    <br><span>アンカータグを使用して外部リンク<a href="https://canape2020.stars.ne.jp/">Canapeでお寛ぎ!</a></span>
+<p>ここは
+      <br>Webサイト制作ではおなじみのindex.htmlファイルですね。
+      <br>Projectを開くとWebサイトの最初のページが表示されます。Webページの title や言語の指定はこちらから書き換えます。
+    　<br>参考記事<a href="https://www.webcreatorbox.com/tech/vite-react">https://www.webcreatorbox.com/tech/vite-react</a>
+      <br>VScodeで稼動<code> npm run dev </code>コマンドする。もし<code>  sh: vite: command not found</code>となってたら<code>% npm install --save-dev vite</code>の後再度コマンドする。 
+    </p>
+    <span id="jsx">JSX（JavaScript XML）</span>
     <div id="root"></div>
-    <!-- queen.png を表示する img タグ -->
-    <img src="images/queen.png" alt="Queen Image">
+    
+    
+    <script>
+      // JavaScript を使用して日時を取得
+      const currentDate = new Date();
+      const formattedDate = currentDate.toLocaleString();
+
+      // 日時を表示する要素に挿入
+      const datetimeElement = document.getElementById("datetime");
+      datetimeElement.textContent = `現在の日時: ${formattedDate}`;
+    </script>
     
 
     
-    <script type="module">
-        // import { h, render } from 'preact';
-        // import { Canape } from '/src/canape.jsx'; // パスの先頭にスラッシュを追加
-    
-        render(<Canape />, document.getElementById('root'));
-    </script> 
-    
-</body>
+  </body>
 </html>
