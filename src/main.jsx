@@ -1,18 +1,28 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+// import React from 'react'
+// import ReactDOM from 'react-dom/client'
+// import App from './App.jsx'
+// import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+// )
+
+
+// 直し11/1
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App'; // このパスはプロジェクト構造に合わせて変更してください
+import './index.css'; // 同様にパスを変更してください
+
+ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-)
+  document.getElementById('root')
+);
 
-
-// import queenImage from './images/queen.png'; // 画像のインポート
-
-// // 
 
 // import ReactDOM from 'react-dom';
 
