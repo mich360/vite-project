@@ -7,7 +7,7 @@ export default defineConfig({
   base: './', // ルートパスを設定
   build: {
     rollupOptions: {
-      external: ['/src/main.js'], // ここで `/src/main.js` を外部モジュールとして指定
+      external: ['/src/main.jsx'], // ここで `/src/main.js` を外部モジュールとして指定
     },
   },
 })
