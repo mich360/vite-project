@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/index.css">
+    <title>Canape Page</title>
+   
+</head>
+<body>
+    <header>
+        <nav>
+            <span>Canape</span>
+            &emsp;<a href="/">Home</a>&emsp;|
+            &emsp;<a href="./public/index.html">index</a>&emsp;|
+            &emsp;<a href="./public/start.html">start</a>&emsp;
+        </nav>
+    </header>
+    <p id="datetime">現在の日時: Loading...</p>
+    <span id="jsx">JSX（JavaScript XML）</span>
+    <div id="root"></div>
+    
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // JavaScript を使用して日時を取得
+      const currentDate = new Date();
+      const formattedDate = currentDate.toLocaleString();
+
+      // 日時を表示する要素に挿入
+      const datetimeElement = document.getElementById("datetime");
+      datetimeElement.textContent = `現在の日時: ${formattedDate}`;
+    </script>
+</body>
+</html>
+ 
+
+
+
+
+
+
+
+
+
+
+  <!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canape Page</title>
+   CSSファイルのパスを修正 
+    <link rel="stylesheet" href="./src/canape.css">
+</head>
+<body>
+    <div id="app"></div>
+    <script type="module">
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        import Canape from './src/canape.jsx'; // Canapeコンポーネントのファイルパスを正しく指定
+        
+        // Canapeコンポーネントをルート要素にレンダリング
+        ReactDOM.render(<Canape />, document.getElementById('app'));
+    </script>
+</body>
+</html>-->
