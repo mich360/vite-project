@@ -5,14 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: './', // ルートパスを設定
-  build: {
-    rollupOptions: {
-      external: ['/src/main.jsx'], // ここで `/src/main.js` を外部モジュールとして指定
-    },
-  },
+  
 })
 
-// vite.config.js
 
 
 
