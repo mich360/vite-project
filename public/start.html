@@ -93,11 +93,18 @@ html code
 &lt;/html>
 
                         </code> </pre>
-                　　　<p>src フォルダ内に index.html ファイルを作成場合:
-        　　　　　　　　　<br>これは通常、ウェブアプリケーションのメインの HTML ファイルとなります。
-        　　　　　　　　　<br>ここには React コンポーネントがレンダリングされる場所も含まれます。
-        　　　　　　　　　<br>React コンポーネントを index.html に挿入し、
-                       <br>それを ReactDOM.render() を使用してルート要素にマウントします。たとえば:</p>
+                　　　<p>Viteは通常、<mark>JavaScriptやJSX、CSS、画像、その他のリソースなど、さまざまな種類のファイルを含むソースコードを <B>srcディレクトリ</B></mark>に置くように推奨します。一般的に、JavaScriptファイル（.jsや.jsx）は主なコンポーネントやロジックを含むため、このディレクトリに配置されます。しかし、Viteでは他の種類のファイルも一緒に扱うことができます。
+
+                    CSSファイルはJavaScriptモジュールとしてインポートされ、画像やフォントなどの静的ファイルも同様に扱われます。これらのリソースはJavaScriptやCSSから参照されることが多いため、ソースコードと同じ場所に配置されます。
+                    
+                    ただし、<mark>公開用のHTMLファイルは通常、<b>publicディレクトリ</b></mark> に配置されます。このHTMLファイルはビルド時にソースコードと組み合わせられ、最終的な公開物として生成されることが一般的です。
+                    
+                    
+                    
+                    
+                    
+                    
+                    </p>
         　　　　　　　　　　<pre><code>
 html code
 
@@ -155,6 +162,58 @@ render(<Canape />, document.getElementById('root'));
         
         
         
+                </div>
+                <div id="pre"> 
+                    <h3>Viteでビルドする</h3>
+                    <span>開発中のJavaScriptやCSSなどのファイルを、本番環境で使用できるように最適化するプロセスです。開発中は、ファイルを編集しやすく、開発者向けの便利な機能を利用できますが、これらのファイルは最適化されておらず、読み込みが速いとは限りません。このプロセスでは、不要な空白やコメントを取り除き、JavaScriptやCSSを圧縮し、効率的に読み込めるようにします。また、JavaScriptのバージョンを変更し、古いブラウザでも動作するようにします。</span>
+                    <p>ビルドは開発者向けの便利な機能を削減し、本番環境でのパフォーマンスを最適化する作業です。その結果、ユーザーがウェブサイトやアプリケーションをより高速かつ効率的に利用できるようになります。</p>
+                    <span>distディレクトリは、Viteがプロジェクトをビルドする際に生成されます。通常、開発中には存在せず、<mark>npm run build</mark> npm run buildなどのビルドコマンドを実行すると、Viteがプロジェクトをビルドし、最適化されたファイルをdistディレクトリに出力します。これにより、本番用に最適化されたアセットが準備されます。</span>
+                </div>
+                <div id="pre"> 
+                <span style="font-size:0.7em;color: blue">
+                    Viteがビルドされる際に、デフォルトでdistディレクトリに出力されるファイルをカスタマイズすることができます。以下はvite.config.jsでビルドの出力先をdistディレクトリに変更する例です。
+                </span>
+               
+                    <code><pre>
+     vite.config.js : code
+
+                        import { defineConfig } from 'vite';
+                        import react from '@vitejs/plugin-react';
+
+                        export default defineConfig({
+                        plugins: [react()],
+                        build: {
+                            outDir: 'dist', // ビルドの出力先を指定
+                            rollupOptions: {
+                            input: {
+                                main: './src/main.jsx',
+                            },
+                            },
+                        },
+                        });
+
+                    </pre></code>
+                    <span style="font-size:0.7em;color: blue">この設定を使用すると、Viteはビルドされたファイルをデフォルトのdistディレクトリに出力します。
+
+その後、Verselなどのホスティングサービスにデプロイする際に、distディレクトリ内のファイルをサービスが提供するルートディレクトリに配置することで、リンクが正しく機能するはずです</span>
+                </div>
+                <div id="pre"> 
+
+Sure, here's a step-by-step guide.
+                <ol>
+                    <li>設定ファイルの作成: プロジェクトルートに vite.config.js を作成し、先ほどの内容を記述します。</li>
+                    <li>ビルドの実行: コマンドラインで npm run build を実行します。これにより、Viteは設定に基づいてビルドを開始し、出力されたファイルはdistディレクトリに保存されます。</li>
+                    <li>ファイルの移動: 生成されたdistディレクトリ内のファイルを、Verselや他のホスティングサービスが提供するルートディレクトリに配置します。</li>
+                    <li>デプロイメント: ファイルが配置されたディレクトリを、Verselや選択したホスティングサービスにデプロイします。</li>
+                  
+                </ol>
+                    これで、Verselや他のホスティングサービスでデプロイされたアプリケーションを表示することができるはずです。 Verselなどのプラットフォームは、ルートディレクトリに配置されたindex.htmlを自動的に認識し、それをエントリーポイントとして扱います。
+
+
+
+
+
+
                 </div>
     </article>
     　　　　　　　        <p>このページ編集するには  <code>project名/public/start.html</code>にあるファイルを開く</p>     
