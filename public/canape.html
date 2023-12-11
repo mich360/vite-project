@@ -18,6 +18,237 @@
     </header>
   
     <p id="datetime">現在の日時: Loading...</p>
+
+    　
+　<SCRIPT LANGUAGE="JavaScript">   /*ボタンクロック作るJAVA　HTMLソースのHEAD区間に貼り付けしましょう。*/
+　
+　function tokei1(){
+　myDate=new Date();
+　myHour=myDate.getHours();
+　myMinute=myDate.getMinutes();
+　mySecond=myDate.getSeconds();
+　if (myHour<10) {myHour="0"+myHour};
+　if (myMinute<10) {myMinute="0"+myMinute};
+　if (mySecond<10) {mySecond="0"+mySecond};
+　　document.mybutton.buttonclock.value=" 時刻は"+myHour+"時"+myMinute+"分"+mySecond+"秒です";
+　setTimeout("tokei1()",1000);
+　}
+　function hizuke2(){
+　youbi=new Array("日","月","火","水","木","金","土");
+　myDate=new Date();
+　y=myDate.getFullYear();
+　m=myDate.getMonth()+1;
+　d=myDate.getDate();
+　w=youbi[myDate.getDay()];
+　alert("本日は"+y+"年"+m+"月"+d+"日("+w+"曜日)"+"です");
+　}
+　//
+　</SCRIPT>
+
+
+/*ボタンクロックを表示させたい場所のHTMLソースのBODY区間に貼り付けしましょう。*/
+
+<FORM name="mybutton">
+<INPUT type="button" name="buttonclock" onClick="hizuke2()" value="時刻は○時○分○秒です">
+<SCRIPT LANGUAGE="JavaScript">
+
+tokei1();
+//
+</SCRIPT>
+</FORM>
+
+
+/*BODY　区間に貼り付けしましょう。プログラムＡのソースの上から4行目の new Date(2014, 10-1, 4) のところを、あなたの特定する日にかえてください。
+サイトの開設の日を2014年の10月3日という事にしていますが、その日を１日目としてしまうので、その次の日をプログラムに書き込んでいます。だから (2014, 10-1, 4) となっていますね。この赤い数字をあなたの特定する日にかえてみましょう。*/
+
+   <SCRIPT LANGUAGE="JavaScript">　　
+  
+  var now = new Date();
+  var xxday = new Date(2014, 10-1, 4);
+  count2 = Math.ceil( (now.getTime() - xxday.getTime()) / (24*60*60*1000) );
+  document.write("<FONT style='font-size : 16px; color : #666666'>");
+  document.write("サイト開設より");
+   document.write(count2);
+  document.write("日が経過いたしました</FONT>");
+  //
+  </SCRIPT>*/
+  
+  var now = new Date();
+  var xxday = new Date(2014, 10-1, 4);
+  count2 = Math.ceil( (now.getTime() - xxday.getTime()) / (24*60*60*1000) );
+   document.write("<FONT style='font-size : 16px; color : #666666'>");
+   document.write("サイト開設より");
+  document.write(count2);
+  document.write("日が経過いたしました</FONT>");
+  //
+   </SCRIPT>
+
+
+         <SCRIPT LANGUAGE="JavaScript"> 　　　 /*メッセージを表示させたい場所のHTMLソースのBODY区間に貼り付けしましょう。*/
+        
+　　　mes=new Array(24);
+　　　mes[0]="午前０時をすぎました・・・";
+　　　mes[1]="午前１時をすぎました・・・";
+　　　mes[2]="午前２時をすぎました・・・";
+　　　mes[3]="午前３時をすぎました・・・";
+　　　mes[4]="午前４時をすぎました・・・";
+　　　mes[5]="午前５時をすぎました・・・";
+　　　mes[6]="午前６時をすぎました・・・";
+　　　mes[7]="午前７時をすぎました・・・";
+　　　mes[8]="午前８時をすぎました・・・";
+　　　mes[9]="午前９時をすぎました・・・";
+　　　mes[10]="午前１０時をすぎました・・・";
+　　　mes[11]="午前１１時をすぎました・・・";
+　　　mes[12]="正午をすぎました・・・";
+　　　mes[13]="午後１時をすぎました・・・";
+　　　mes[14]="午後２時をすぎました・・・";
+　　　mes[15]="午後３時をすぎました・・・";
+　　　mes[16]="午後４時をすぎました・・・";
+　　　mes[17]="午後５時をすぎました・・・";
+　　　mes[18]="午後６時をすぎました・・・";
+　　　mes[19]="午後７時をすぎました・・・";
+　　　mes[20]="午後８時をすぎました・・・";
+　　　mes[21]="午後９時をすぎました・・・";
+　　　mes[22]="午後１０時をすぎました・・・";
+　　　mes[23]="午後１１時をすぎました・・・";
+　　　function TimeMes24(){
+　　　myDate=new Date();
+　　　myTime=myDate.getHours();
+　　　document.write("<FONT style='font-size : 16px; color : #666666'>");
+　　　document.write(mes[myTime]);
+　　　document.write("</FONT>");
+　　　}
+　　　TimeMes24();
+　　　//
+　　　</SCRIPT>
+
+
+　　<SCRIPT LANGUAGE="JavaScript">
+　　　
+　　Yo=new Array(7);
+　　Yo[0]="今日は日曜日です・・・";
+　　Yo[1]="今日は月曜日です・・・";
+　　Yo[2]="今日は火曜日です・・・";
+　　Yo[3]="今日は水曜日です・・・";
+　　Yo[4]="今日は木曜日です・・・";
+　　Yo[5]="今日は金曜日です・・・";
+　　Yo[6]="今日は土曜日です・・・";
+　　myDate=new Date();
+　　myYo=myDate.getDay();
+　　document.write("<FONT style='font-size : 16px; color : #666666'>");
+　　document.write(Yo[myYo]);
+　　document.write("</FONT>");
+　　//
+　　</SCRIPT>
+
+
+
+<FORM>
+<INPUT type="text" size="30" value="http://www.sky.sannet.ne.jp/masapine/java_top.html">
+</FORM>
+
+<FORM>
+<INPUT type="text" size="30" value="http://www.sky.sannet.ne.jp/masapine/java_top.html" style="color:#0099FF; font-size:12pt; background-color:#F0F8FF">
+</FORM>
+
+<FORM name="f_scroll">
+<INPUT name="t_scroll" size="35">/*テキストボックスを表示させたい場所のHTMLソースのBODY区間に貼り付けしましょう。スクロール用　Headにもスクロール用を入れる*/
+</FORM>
+
+<SCRIPT LANGUAGE="JavaScript">　　　/*テキストボックスを表示させたい場所のHTMLソースのHead区間に貼り付けしましょう。スクロール用　Bodyにもスクロール用を入れる*/
+</FORM>
+
+msg0="　　　　　　　　　　　　　　　　　　　　　　　　";
+msg1="ようこそ「５・６年生にもわかるやさしいＪａｖａＳｃｒｉｐｔ」へ！"; 
+msg2="このサイトでは「ＪａｖａＳｃｒｉｐｔ」をやさしく解説しています。";
+msg3="お気に入りのメニューをあなたのページで使ってみてくださいね。";
+msg=msg0+msg1+msg0+msg2+msg0+msg3;
+function scroll_msg(){
+msg=msg.substring(2,msg.length)+msg.substring(0,2);
+document.f_scroll.t_scroll.value=msg;
+setTimeout("scroll_msg()",300);
+}
+//
+</SCRIPT>
+
+onload="scroll_msg()"　/*HTMLソースの<body の y のすぐうしろに半角スペースをひとつ入力してから貼り付けしましょう。*/
+
+/*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
+<SCRIPT LANGUAGE="JavaScript">              /*テキストボックスを表示させたい場所のHTMLソースのHead区間に貼り付けしましょう。スクロール用　Bodyにもスクロール用を入れる*/*Head区間に貼付ココ17行分*/
+
+smes=new Array(5);
+smes[0]="ようこそ「５・６年生にもわかるやさしいＪａｖａＳｃｒｉｐｔ」へ！";
+smes[1]="このサイトは、小学校の高学年くらいでも理解ができるように・・・";
+smes[2]="使いやすい「ＪａｖａＳｃｒｉｐｔ」をできるだけやさしく解説しています。";
+smes[3]="初めてやってみる方や、うまくいかない方にも心強いサイトですよ。";
+smes[4]="お気に入りのメニューをあなたのページで使ってみてくださいね。";
+n=0;
+function Some_Mes(){
+document.myForm1.myMes.value=smes[n];
+n++;
+if(n==5){n=0}
+setTimeout("Some_Mes()",5000);
+}
+//
+</SCRIPT>
+
+
+<FORM name="myForm1">
+<INPUT type="text" name="myMes" size="70" style="text-align:center">      /*テキストボックスを表示させたい場所のHTMLソースのBody区間に貼り付けしましょう。スクロール用Headにもスクロール用を入れる*/
+</FORM>
+</FORM>
+
+
+onload="Some_Mes()"      /*HTMLソースの<body の y のすぐうしろに半角スペースをひとつ入力してから貼り付けしましょう。*/
+
+
+/*プログラムＢの上から４行目～８行目に、テキストボックスに表示するメッセージが書いてありますので、あなたの表示させたいメッセージにかえてください。
+smes[0]="ようこそ「５・６年生にもわかるやさしいＪａｖａＳｃｒｉｐｔ」へ！"; などの ようこそ「５・６年生にもわかるやさしいＪａｖａＳｃｒｉｐｔ」へ！ をあなたの表示させたいメッセージにかえてください。
+この例では、smes[0] から smes[4] まで、５つのメッセージが設定してあります。もしメッセージの数を増やすなら、smes[5] 、smes[6] 、というようにソースの追加をしてください。その場合には、プログラムＢのソースの smes=new Array(5); と if(n==5){n=0} のところの 5 をメッセージの数にかえてください。
+メッセージは５秒ごとに表示する設定になっていますが、下から４行目にある setTimeout("Some_Mes()",5000); の 5000 を 3000 にすると３秒ごとの表示になりますから、あなたのお好きな秒数にかえてみてください。*/
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+smes=new Array(5);
+smes[0]="ようこそ「５・６年生にもわかるやさしいＪａｖａＳｃｒｉｐｔ」へ！";
+smes[1]="このサイトは、小学校の高学年くらいでも理解ができるように・・・";
+smes[2]="使いやすい「ＪａｖａＳｃｒｉｐｔ」をできるだけやさしく解説しています。";
+smes[3]="初めてやってみる方や、うまくいかない方にも心強いサイトですよ。";
+smes[4]="お気に入りのメニューをあなたのページで使ってみてくださいね。";
+n=0;
+function Some_Mes(){
+document.myForm1.myMes.value=smes[n];
+n++;
+if(n==5){n=0}
+setTimeout("Some_Mes()",5000);
+}
+//
+</SCRIPT>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <span id="jsx">JSX（JavaScript XML）</span>
     <div id="root"></div>
     
