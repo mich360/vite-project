@@ -61,27 +61,17 @@ tokei1();
 /*BODY　区間に貼り付けしましょう。プログラムＡのソースの上から4行目の new Date(2014, 10-1, 4) のところを、あなたの特定する日にかえてください。
 サイトの開設の日を2014年の10月3日という事にしていますが、その日を１日目としてしまうので、その次の日をプログラムに書き込んでいます。だから (2014, 10-1, 4) となっていますね。この赤い数字をあなたの特定する日にかえてみましょう。*/
 -->
-   <SCRIPT LANGUAGE="JavaScript">　　
-  
+
+    
+   <SCRIPT LANGUAGE="JavaScript">
   var now = new Date();
-  var xxday = new Date(2014, 10-1, 4);
-  count2 = Math.ceil( (now.getTime() - xxday.getTime()) / (24*60*60*1000) );
-  document.write("<FONT style='font-size : 16px; color : #666666'>");
+  var xxday = new Date(2014, 10 - 1, 4);
+  count2 = Math.ceil((now.getTime() - xxday.getTime()) / (24 * 60 * 60 * 1000));
+  document.write("<FONT style='font-size: 16px; color: #666666'>");
   document.write("サイト開設より");
   document.write(count2);
   document.write("日が経過いたしました</FONT>");
-  
-  </SCRIPT>
-  
-  var now = new Date();
-  var xxday = new Date(2014, 10-1, 4);
-  count2 = Math.ceil( (now.getTime() - xxday.getTime()) / (24*60*60*1000) );
-   document.write("<FONT style='font-size : 16px; color : #666666'>");
-   document.write("サイト開設より");
-  document.write(count2);
-  document.write("日が経過いたしました</FONT>");
-  
-   </SCRIPT>
+</SCRIPT>
 
 
          <SCRIPT LANGUAGE="JavaScript"> 　　　 /*メッセージを表示させたい場所のHTMLソースのBODY区間に貼り付けしましょう。*/
