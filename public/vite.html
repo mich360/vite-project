@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./canape.css"> 
+    <title>Vite Project</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin-left: 20px;
+        /* margin: 0; */
+        padding: 0;
+        background-color: #f0f0f0;
+        font-weight: bold;
+        font-size: 20px;
+      }
+  
+      h1, h2 {
+        font-weight: normal;
+      }
+      pre{
+        color: rgb(67, 100, 232);
+      }
+      #img{
+        margin-right: 130px;
+        float: right;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            &emsp;<a href="/">Home</a>&emsp;|
+            &emsp;<a href="start.html">Viteプロジェクト</a>&emsp;|
+          
+            <!-- &emsp;<a href="index.html">public-index</a>&emsp;|
+            &emsp;<a href="#">Contact</a>&emsp;| -->
+        </nav>
+      </header>
+    <h1>Node.jsとViteプロジェクト作成</h1>
+    <a href="https://chatgpt.com/c/a94ed6ae-96ab-40a3-a749-ad4ee6f87d47">資料</a>
+    <div id="img"><img src="images/osiro.JPG" width="500" alt="Oshiro" /><br>Osiro.JPG</div>
+    <h2>基本コマンド</h2>
+    <pre>
+        node -v
+        cd ~/Desktop
+        mkdir vite
+        cd vite
+        npm create vite@latest      :新しいReactプロジェクトの作成
+
+        cd &lt;project-name>             :依存関係のインストール
+            npm install
+                    
+        npm run dev
+   
+  １、      index.html作成
+                &lt;!DOCTYPE html>
+                &lt;html lang="en">
+                &lt;head>
+              &lt;meta charset="UTF-8">
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+              &lt;title>My Vite Project &lt;/title>
+              &lt;/head>
+              &lt;body>
+              &lt;h1>Hello, Vite! &lt;/h1>
+              &lt;p>This is my custom page. &lt;/p>
+              &lt;/body>
+              &lt;/html>
+        </pre>
+
+2 , main.jsまたはmain.tsの編集
+ JavaScript/TypeScriptのコードを追加します。
+ 
+<pre>
+              <mark>// src/main.js</mark>
+              import './style.css';
+
+              document.querySelector('#app').innerHTML = `
+              &lt;h1>Hello Vite! &lt;/h1>
+              import React from 'react';
+              import ReactDOM from 'react-dom/client';
+              import App from './App.jsx';
+              import './index.css';
+              
+              ReactDOM.createRoot(document.getElementById('root')).render(
+                &lt;React.StrictMode>
+                  &lt;App />
+                &lt;/React.StrictMode>
+              );
+              a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation &lt;/a>
+              `;
+
+
+
+</pre>
+3,  変更内容の反映
+<br>
+npm run devを実行中であれば、保存するたびにブラウザが自動的に更新され、変更内容が反映されます。
+この手順を通じて、Node.jsおよびViteをインストールし、独自のWebページを表示することができます。
+<h2>プロジェクト構造の確認と編集</h2>
+srcディレクトリ内のファイルを以下のように設定します。
+
+<br><mark>src/main.jsx</mark>
+<pre>
+      import React from 'react';
+      import ReactDOM from 'react-dom/client';
+      import App from './App.jsx';
+      import './index.css';
+
+      ReactDOM.createRoot(document.getElementById('root')).render(
+        &lt;React.StrictMode>
+          &lt;App />
+          &lt;/React.StrictMode>
+      );
+
+</pre>
+
+次に、App.jsxを編集します。このファイルに表示したいコンテンツを追加します。
+<br><mark>src/App.jsx</mark>
+<pre>
+          import React from 'react';
+
+        const App = () => {
+          return (
+            &lt;div>
+            &lt;h1>Hello Vite! &lt;/h1>
+            &lt;a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation &lt;/a>
+            &lt;/div>
+          );
+        };
+
+        export default App;
+
+</pre>
+
+必要に応じてスタイルを設定します。ここでは、基本的なスタイルの例を示します。
+<br><mark>src/index.css</mark>
+<pre>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+          }
+          
+          h1 {
+            color: #333;
+          }
+          
+          a {
+            color: #007bff;
+            text-decoration: none;
+          }
+          
+          a:hover {
+            text-decoration: underline;
+          }
+          
+</pre>
+ローカルサーバーの起動
+以下のコマンドを実行して、開発サーバーを起動します。
+<pre>
+         npm run dev
+</pre>
+<h2><mark>src/App.jsx </mark>コード にheader やnav を追加</h2>
+更新された src/App.jsx
+以下のように各セクションのコンテンツを追加します。リンクをクリックすると対応するセクションにスクロールするようにします。
+<pre>
+          import React from 'react';
+
+          const App = () => {
+            return (
+              &lt;div>
+                &lt;header>
+                  &lt;h1>My Website&lt;/h1>
+                  &lt;nav>
+                    &lt;ul>
+                      &lt;li>&lt;a href="#home">Home&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#about">About&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#services">Services&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
+                    &lt;/ul>
+                  &lt;/nav>
+                &lt;/header>
+                &lt;main>
+                  &lt;section id="home">
+                    &lt;h2>Home&lt;/h2>
+                    &lt;p>Welcome to the homepage!&lt;/p>
+                  &lt;/section>
+                  &lt;section id="about">
+                    &lt;h2>About&lt;/h2>
+                    &lt;p>This is the about section.&lt;/p>
+                  &lt;/section>
+                  &lt;section id="services">
+                    &lt;h2>Services&lt;/h2>
+                    &lt;p>Here are the services we offer.&lt;/p>
+                  &lt;/section>
+                  &lt;section id="contact">
+                    &lt;h2>Contact&lt;/h2>
+                    &lt;p>Get in touch with us!&lt;/p>
+                  &lt;/section>
+                  &lt;h1>Hello Vite!&lt;/h1>
+                  &lt;a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation&lt;/a>
+                &lt;/main>
+              &lt;/div>
+            );
+          };
+
+          export default App;
+
+</pre>
+スタイルの追加（オプション）
+<br><mark>src/index.css</mark>に各セクションのスタイルを追加します
+    <pre>
+            body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f0f0f0;      //	背景色を薄いグレー　白
+            }
+            
+            header {
+              background-color: #282c34;        //重い青
+              padding: 20px;
+              color: white;
+            }
+            
+            header h1 {
+              margin: 0;
+              display: inline-block;
+            }
+            
+            nav ul {
+              list-style-type: none;
+              padding: 0;
+            }
+            
+            nav ul li {
+              display: inline;
+              margin-right: 20px;
+            }
+            
+            nav ul li a {
+              color: white;
+              text-decoration: none;
+            }
+            
+            nav ul li a:hover {
+              text-decoration: underline;
+            }
+            
+            main {
+              padding: 20px;
+            }
+            
+            section {
+              padding: 20px 0;
+            }
+            
+            section:nth-child(odd) {
+              background-color: #fff;
+            }
+            
+            section:nth-child(even) {
+              background-color: #f9f9f9;
+            }
+            
+            a {
+              color: #007bff;
+              text-decoration: none;
+            }
+            
+            a:hover {
+              text-decoration: underline;
+            }
+            
+    </pre>
+   <h2>header内にリンクを追加し、それらのリンク先のファイルを作成する方法</h2> 
+   1. header内にリンクを追加
+まず、header内にリンクを追加します。リンクはReact RouterのLinkコンポーネントを使用します。
+
+<br>更新された<mark>src/App.jsx</mark>
+<pre>
+              import React from 'react';
+              import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+              import Home from './pages/Home';
+              import About from './pages/About';
+              import Services from './pages/Services';
+              import Contact from './pages/Contact';
+              
+              const App = () => {
+                return (
+                  &lt;Router>
+                    &lt;div>
+                      &lt;header>
+                        &lt;h1>My Website&lt;/h1>
+                        &lt;nav>
+                          &lt;ul>
+                            &lt;li>&lt;Link to="/">Home&lt;/Link>&lt;/li>
+                            &lt;li>&lt;Link to="/about">About&lt;/Link>&lt;/li>
+                            &lt;li>&lt;Link to="/services">Services&lt;/Link>&lt;/li>
+                            &lt;li>&lt;Link to="/contact">Contact&lt;/Link>&lt;/li>
+                          &lt;/ul>
+                        &lt;/nav>
+                      &lt;/header>
+                      &lt;main>
+                        &lt;Routes>
+                          &lt;Route path="/" element={&lt;Home />} />
+                          &lt;Route path="/about" element={&lt;About />} />
+                          &lt;Route path="/services" element={&lt;Services />} />
+                          &lt;Route path="/contact" element={&lt;Contact />} />
+                        &lt;/Routes>
+                      &lt;/main>
+                    &lt;/div>
+                  &lt;/Router>
+                );
+              };
+              
+              export default App;
+  
+</pre>
+2, 各リンク先のコンポーネントを作成
+次に、各リンク先のコンポーネントを作成します。
+
+<br><mark>src/pages/Home.jsx</mark>
+<pre>
+              import React from 'react';
+
+              const Home = () => {
+                return (
+                &lt;section>
+                  &lt;h2>Home</h2>
+                  &lt;p>Welcome to the homepage!</p>
+                &lt;/section>
+                );
+              };
+              
+              export default Home;
+  
+</pre>
+<mark>src/pages/About.jsx</mark>
+<pre>
+            import React from 'react';
+
+          const About = () => {
+            return (
+            &lt;section>
+              &lt;h2>About&lt;/h2>
+              &lt;p>This is the about section.&lt;/p>
+            &lt;/section>
+            );
+          };
+
+          export default About;
+
+</pre>
+
+<mark>src/pages/Services.jsx</mark>
+<pre>
+            import React from 'react';
+
+          const Services = () => {
+            return (
+              &lt;section>
+                &lt;h2>Services&lt;/h2>
+                &lt;p>Here are the services we offer.&lt;/p>
+              &lt;/section>
+            );
+          };
+
+          export default Services;
+
+</pre>
+<mark>src/pages/Contact.jsx</mark>
+<pre>
+            import React from 'react';
+
+          const Contact = () => {
+            return (
+              &lt;section>
+                &lt;h2>Contact&lt;/h2>
+                &lt;p>Get in touch with us!&lt;/p>
+              &lt;/section>
+            );
+          };
+
+          export default Contact;
+
+</pre>
+3. React Routerをインストールしてルーティングを設定
+React Routerをインストールして、ルーティングを設定します。
+React Routerのインストール
+<pre>
+              npm install react-router-dom
+
+</pre>
+<h2>画像ファイルをReactアプリケーションのHome画面に反映</h2>
+osiro.JPGファイルをプロジェクトのsrcディレクトリ内に追加します。例えば、
+<br><mark>src/assetsフォルダ</mark>を作成し、その中に画像ファイルを置くことが一般的です。
+<pre>
+                vite-project/
+              ├── src/
+              │   ├── assets/
+              │   │   └── osiro.JPG
+              │   ├── App.jsx
+              │   ├── main.jsx
+              │   └── pages/
+              │       └── Home.jsx
+
+</pre>
+Homeコンポーネントに画像を表示するコードを追加します。
+
+<br><mark>src/pages/Home.jsx</mark>
+<pre>
+            import React from 'react';
+            import osiroImage from '../assets/osiro.JPG';
+            
+            const Home = () => {
+              return (
+                &lt;section>
+                  &lt;h2>Home&lt;/h2>
+                  &lt;p>Welcome to the homepage!&lt;/p>
+                  &lt;img src={osiroImage} alt="Oshiro" />
+                &lt;/section>
+              );
+            };
+            
+            export default Home;
+            
+</pre>
+App.jsxにHomeコンポーネントが正しく設定されているか確認してください。以下はその確認です。
+
+<br><mark>src/App.jsx</mark>
+<pre>
+                import React from 'react';
+                import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+                import Home from './pages/Home';
+                import About from './pages/About';
+                import Services from './pages/Services';
+                import Contact from './pages/Contact';
+                
+                const App = () => {
+                  return (
+                    &lt;Router>
+                      &lt;div>
+                        &lt;header>
+                          &lt;h1>My Website&lt;/h1>
+                          &lt;nav>
+                            &lt;ul>
+                              &lt;li>&lt;Link to="/">Home&lt;/Link>&lt;/li>
+                              &lt;li>&lt;Link to="/about">About&lt;/Link>&lt;/li>
+                              &lt;li>&lt;Link to="/services">Services&lt;/Link>&lt;/li>
+                              &lt;li>&lt;Link to="/contact">Contact&lt;/Link>&lt;/li>
+                            &lt;/ul>
+                          &lt;/nav>
+                        &lt;/header>
+                        &lt;main>
+                          &lt;Routes>
+                            &lt;Route path="/" element={&lt;Home />} />
+                            &lt;Route path="/about" element={&lt;About />} />
+                            &lt;Route path="/services" element={&lt;Services />} />
+                            &lt;Route path="/contact" element={&lt;Contact />} />
+                          &lt;/Routes>
+                        &lt;/main>
+                      &lt;/div>
+                    &lt;/Router>
+                  );
+                };
+                
+                export default App;
+                
+</pre>
+開発サーバーを起動して<code>npm run dev</code>、変更を確認します。
+<br>Viteで画像ファイル（.JPG）をインポートする際にエラーが発生する場合
+<br>Viteの設定ファイルにアセットインクルードを追加
+<br>まず、プロジェクトのルートにある vite.config.js ファイルを開き、以下のようにアセットとしてJPEGファイルを含める設定を追加します。
+<br><mark>vite.config.js</mark>
+<pre>
+              import { defineConfig } from 'vite';
+            import react from '@vitejs/plugin-react';
+
+            export default defineConfig({
+              plugins: [react()],
+              assetsInclude: ['**/*.JPG']
+            });
+
+</pre>
+Reactコンポーネントで画像ファイルをインポートして使用します。
+
+<br><mark>src/pages/Home.jsx</mark>
+<pre>
+                import React from 'react';
+              import osiroImage from '../assets/osiro.JPG';
+
+              const Home = () => {
+                return (
+                  &lt;section>
+                    &lt;h2>Home&lt;/h2>
+                    &lt;p>Welcome to the homepage!&lt;/p>
+                    &lt;img src={osiroImage} alt="Oshiro" />
+                  &lt;/section>
+                );
+              };
+
+              export default Home;
+
+</pre>
+Viteの設定ファイルを変更したので、開発サーバーを再起動する<pre>npm run dev</pre>必要があります。
+</body>
+</html>
+        　　　　
+        
+        
+
+
+    
+    
