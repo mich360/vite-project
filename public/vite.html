@@ -1,97 +1,86 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./canape.css"> 
-    <title>Vite Project</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin-left: 20px;
-        /* margin: 0; */
-        padding: 0;
-        background-color: #f0f0f0;
-        font-weight: bold;
-        font-size: 20px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./canape.css" />
+  <title>Vite Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin-left: 20px;
+      padding: 0;
+      background-color: #f0f0f0;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    h1, h2 {
+      font-weight: normal;
+      margin-top: 3px;
+    }
+
+    pre {
+      color: rgb(67, 100, 232);
+    }
+
+    #img {
+      margin-right: 10px;
+      margin-top: 100px;
+      float: right;
+    }
+
+    @media (max-width: 800px) {
+      img {
+        width: 100px;
       }
-  
-      h1, h2 {
-        font-weight: normal;
-<<<<<<< HEAD
-        margin-top: 3px;
-=======
->>>>>>> 6b8884c (Fix feature file)
-      }
-      pre{
-        color: rgb(67, 100, 232);
-      }
-      #img{
-<<<<<<< HEAD
-        margin-right: 10px;
-        margin-top: 100px;
-        float: right;
-      }
-      @media (max-width: 800px) {
-            img {
-                width: 100px;
-            }
-        }
-=======
-        margin-right: 130px;
-        float: right;
-      }
->>>>>>> 6b8884c (Fix feature file)
-    </style>
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            &emsp;<a href="/">Home</a>&emsp;|
-            &emsp;<a href="start.html">Viteプロジェクト</a>&emsp;|
-          
-            <!-- &emsp;<a href="index.html">public-index</a>&emsp;|
-            &emsp;<a href="#">Contact</a>&emsp;| -->
-        </nav>
-      </header>
-<<<<<<< HEAD
-      <div id="img"><img src="images/osiro.JPG" width="400" alt="Oshiro" /><br>Osiro.JPG</div>
-    <h1>Node.jsとViteプロジェクト作成</h1>
-    
-    <a href="https://chatgpt.com/c/a94ed6ae-96ab-40a3-a749-ad4ee6f87d47">資料</a>
-=======
-    <h1>Node.jsとViteプロジェクト作成</h1>
-    <a href="https://chatgpt.com/c/a94ed6ae-96ab-40a3-a749-ad4ee6f87d47">資料</a>
-    <div id="img"><img src="images/osiro.JPG" width="500" alt="Oshiro" /><br>Osiro.JPG</div>
->>>>>>> 6b8884c (Fix feature file)
-    <h2>基本コマンド</h2>
-    <pre>
-        node -v
-        cd ~/Desktop
-        mkdir vite
-        cd vite
-        npm create vite@latest      :新しいReactプロジェクトの作成
+  <header>
+    <nav>
+      &emsp;<a href="/">Home</a>&emsp;|
+      &emsp;<a href="start.html">Viteプロジェクト</a>&emsp;|
+    </nav>
+  </header>
 
-        cd &lt;project-name>             :依存関係のインストール
-            npm install
-                    
-        npm run dev
-   
-  １、      index.html作成
-                &lt;!DOCTYPE html>
-                &lt;html lang="en">
-                &lt;head>
-              &lt;meta charset="UTF-8">
-              &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
-              &lt;title>My Vite Project &lt;/title>
-              &lt;/head>
-              &lt;body>
-              &lt;h1>Hello, Vite! &lt;/h1>
-              &lt;p>This is my custom page. &lt;/p>
-              &lt;/body>
-              &lt;/html>
-        </pre>
+  <div id="img">
+    <img src="images/osiro.JPG" width="400" alt="Oshiro" /><br />
+    Osiro.JPG
+  </div>
 
+  <h1>Node.jsとViteプロジェクト作成</h1>
+  <a href="https://chatgpt.com/c/a94ed6ae-96ab-40a3-a749-ad4ee6f87d47">資料</a>
+
+  <h2>基本コマンド</h2>
+  <pre>
+node -v
+cd ~/Desktop
+mkdir vite
+cd vite
+npm create vite@latest      :新しいReactプロジェクトの作成
+
+cd &lt;project-name&gt;             :依存関係のインストール
+    npm install
+                
+npm run dev
+
+１、 index.html作成
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+      &lt;title&gt;My Vite Project&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Hello, Vite!&lt;/h1&gt;
+      &lt;p&gt;This is my custom page.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  </pre>
+<!-- ここから先のコードもそのまま活かせます（中略） -->
 2 , main.jsまたはmain.tsの編集
  JavaScript/TypeScriptのコードを追加します。
  
