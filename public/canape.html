@@ -1,197 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="canape.css">
-    <title>Canape Page</title>
-   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canape Page</title>
+  <link rel="stylesheet" href="canape.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <span>Canape</span>
-            &emsp;<a href="/">Home</a>&emsp;|
-            &emsp;<a href="./index.html">index</a>&emsp;|
-            &emsp;<a href="./start.html">start</a>&emsp;
-        </nav>
-    </header>
-  
-    <p id="datetime">現在の日時: Loading...</p>
-<<<<<<< HEAD
+  <header>
+    <nav>
+      <span>Canape</span>
+      &emsp;<a href="/">Home</a>&emsp;|
+      &emsp;<a href="./index.html">index</a>&emsp;|
+      &emsp;<a href="./start.html">start</a>
+    </nav>
+  </header>
 
-    　
-　<SCRIPT LANGUAGE="JavaScript">   /*ボタンクロック作るJAVA　HTMLソースのHEAD区間に貼り付けしましょう。*/
-　
-　function tokei1(){
-　myDate=new Date();
-　myHour=myDate.getHours();
-　myMinute=myDate.getMinutes();
-　mySecond=myDate.getSeconds();
-　if (myHour<10) {myHour="0"+myHour};
-　if (myMinute<10) {myMinute="0"+myMinute};
-　if (mySecond<10) {mySecond="0"+mySecond};
-　　document.mybutton.buttonclock.value=" 時刻は"+myHour+"時"+myMinute+"分"+mySecond+"秒です";
-　setTimeout("tokei1()",1000);
-　}
-　function hizuke2(){
-　youbi=new Array("日","月","火","水","木","金","土");
-　myDate=new Date();
-　y=myDate.getFullYear();
-　m=myDate.getMonth()+1;
-　d=myDate.getDate();
-　w=youbi[myDate.getDay()];
-　alert("本日は"+y+"年"+m+"月"+d+"日("+w+"曜日)"+"です");
-　}
-　
-　</SCRIPT>
+  <p id="datetime">現在の日時: Loading...</p>
 
+  <!-- 時刻ボタン -->
+  <form name="mybutton">
+    <input type="button" name="buttonclock" onclick="hizuke2()" value="時刻は○時○分○秒です" />
+  </form>
 
-<!--/*ボタンクロックを表示させたい場所のHTMLソースのBODY区間に貼り付けしましょう。*/ -->
+  <!-- サイト開設日カウント -->
+  <p id="siteDays"></p>
 
-<FORM name="mybutton">
-<INPUT type="button" name="buttonclock" onClick="hizuke2()" value="時刻は○時○分○秒です">
-<SCRIPT LANGUAGE="JavaScript">
+  <!-- 時間帯メッセージ -->
+  <p id="timeMessage"></p>
 
-tokei1();
+  <!-- 曜日メッセージ -->
+  <p id="dayMessage"></p>
 
-</SCRIPT>
-</FORM>
+  <div id="root"></div>
 
-<!--
-/*BODY　区間に貼り付けしましょう。プログラムＡのソースの上から4行目の new Date(2014, 10-1, 4) のところを、あなたの特定する日にかえてください。
-サイトの開設の日を2014年の10月3日という事にしていますが、その日を１日目としてしまうので、その次の日をプログラムに書き込んでいます。だから (2014, 10-1, 4) となっていますね。この赤い数字をあなたの特定する日にかえてみましょう。*/
--->
+  <script type="module" src="/src/main.jsx"></script>
 
-    
-   <SCRIPT LANGUAGE="JavaScript">
-  var now = new Date();
-  var xxday = new Date(2023,12 - 1, 4);
-  count2 = Math.ceil((now.getTime() - xxday.getTime()) / (24 * 60 * 60 * 1000));
-  document.write("<FONT style='font-size: 16px; color: #666666'>");
-  document.write("サイト開設より");
-  document.write(count2);
-  document.write("日が経過いたしました</FONT>");
-</SCRIPT>
+  <script>
+    // 時間をリアルタイムで表示
+    function tokei1() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      const s = String(now.getSeconds()).padStart(2, '0');
+      document.mybutton.buttonclock.value = `時刻は${h}時${m}分${s}秒です`;
+      setTimeout(tokei1, 1000);
+    }
 
+    function hizuke2() {
+      const youbi = ["日", "月", "火", "水", "木", "金", "土"];
+      const now = new Date();
+      const y = now.getFullYear();
+      const m = now.getMonth() + 1;
+      const d = now.getDate();
+      const w = youbi[now.getDay()];
+      alert(`本日は${y}年${m}月${d}日(${w}曜日)です`);
+    }
 
-         <SCRIPT LANGUAGE="JavaScript"> 　　　 /*メッセージを表示させたい場所のHTMLソースのBODY区間に貼り付けしましょう。*/
-        
-　　　mes=new Array(24);
-　　　mes[0]="午前０時をすぎました・・・";
-　　　mes[1]="午前１時をすぎました・・・";
-　　　mes[2]="午前２時をすぎました・・・";
-　　　mes[3]="午前３時をすぎました・・・";
-　　　mes[4]="午前４時をすぎました・・・";
-　　　mes[5]="午前５時をすぎました・・・";
-　　　mes[6]="午前６時をすぎました・・・";
-　　　mes[7]="午前７時をすぎました・・・";
-　　　mes[8]="午前８時をすぎました・・・";
-　　　mes[9]="午前９時をすぎました・・・";
-　　　mes[10]="午前１０時をすぎました・・・";
-　　　mes[11]="午前１１時をすぎました・・・";
-　　　mes[12]="正午をすぎました・・・";
-　　　mes[13]="午後１時をすぎました・・・";
-　　　mes[14]="午後２時をすぎました・・・";
-　　　mes[15]="午後３時をすぎました・・・";
-　　　mes[16]="午後４時をすぎました・・・";
-　　　mes[17]="午後５時をすぎました・・・";
-　　　mes[18]="午後６時をすぎました・・・";
-　　　mes[19]="午後７時をすぎました・・・";
-　　　mes[20]="午後８時をすぎました・・・";
-　　　mes[21]="午後９時をすぎました・・・";
-　　　mes[22]="午後１０時をすぎました・・・";
-　　　mes[23]="午後１１時をすぎました・・・";
-　　　function TimeMes24(){
-　　　myDate=new Date();
-　　　myTime=myDate.getHours();
-　　　document.write("<FONT style='font-size : 16px; color : #666666'>");
-　　　document.write(mes[myTime]);
-　　　document.write("</FONT>");
-　　　}
-　　　TimeMes24();
-　　　
-　　　</SCRIPT>
+    function siteDaysPassed() {
+      const now = new Date();
+      const startDate = new Date(2023, 11, 4); // 2023年12月4日（0-indexed）
+      const days = Math.ceil((now - startDate) / (1000 * 60 * 60 * 24));
+      document.getElementById("siteDays").textContent = `サイト開設より ${days} 日が経過しました。`;
+    }
 
+    function showTimeMessage() {
+      const mes = [
+        "午前０時をすぎました・・・", "午前１時をすぎました・・・", "午前２時をすぎました・・・",
+        "午前３時をすぎました・・・", "午前４時をすぎました・・・", "午前５時をすぎました・・・",
+        "午前６時をすぎました・・・", "午前７時をすぎました・・・", "午前８時をすぎました・・・",
+        "午前９時をすぎました・・・", "午前１０時をすぎました・・・", "午前１１時をすぎました・・・",
+        "正午をすぎました・・・", "午後１時をすぎました・・・", "午後２時をすぎました・・・",
+        "午後３時をすぎました・・・", "午後４時をすぎました・・・", "午後５時をすぎました・・・",
+        "午後６時をすぎました・・・", "午後７時をすぎました・・・", "午後８時をすぎました・・・",
+        "午後９時をすぎました・・・", "午後１０時をすぎました・・・", "午後１１時をすぎました・・・"
+      ];
+      const hour = new Date().getHours();
+      document.getElementById("timeMessage").textContent = mes[hour];
+    }
 
-　　<SCRIPT LANGUAGE="JavaScript">
-　　　
-　　Yo=new Array(7);
-　　Yo[0]="今日は日曜日です・・・";
-　　Yo[1]="今日は月曜日です・・・";
-　　Yo[2]="今日は火曜日です・・・";
-　　Yo[3]="今日は水曜日です・・・";
-　　Yo[4]="今日は木曜日です・・・";
-　　Yo[5]="今日は金曜日です・・・";
-　　Yo[6]="今日は土曜日です・・・";
-　　myDate=new Date();
-　　myYo=myDate.getDay();
-　　document.write("<FONT style='font-size : 16px; color : #666666'>");
-　　document.write(Yo[myYo]);
-　　document.write("</FONT>");
-　　//
-　　</SCRIPT>
+    function showWeekdayMessage() {
+      const days = ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"];
+      const today = new Date().getDay();
+      document.getElementById("dayMessage").textContent = `今日は${days[today]}です・・・`;
+    }
 
+    // 現在時刻
+    const currentDate = new Date();
+    const formattedDate = currentDate.toLocaleString();
+    document.getElementById("datetime").textContent = `現在の日時: ${formattedDate}`;
 
-
-
-
-
-
-
-
-
-
-
-    
-    <span id="jsx">JSX（JavaScript XML）</span>
-=======
-    <!-- <span id="jsx">JSX（JavaScript XML）</span> -->
->>>>>>> 6b8884c (Fix feature file)
-    <div id="root"></div>
-    
-    <script type="module" src="/src/main.jsx"></script>
-    <script>
-      // JavaScript を使用して日時を取得
-      const currentDate = new Date();
-      const formattedDate = currentDate.toLocaleString();
-
-      // 日時を表示する要素に挿入
-      const datetimeElement = document.getElementById("datetime");
-      datetimeElement.textContent = `現在の日時: ${formattedDate}`;
-    </script>
+    // 実行
+    tokei1();
+    siteDaysPassed();
+    showTimeMessage();
+    showWeekdayMessage();
+  </script>
 </body>
 </html>
- 
-
-
-
-
-
-
-
-
-
-
-  <!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canape Page</title>
-   CSSファイルのパスを修正 
-    <link rel="stylesheet" href="./src/canape.css">
-</head>
-<body>
-    <div id="app"></div>
-    <script type="module">
-        import React from 'react';
-        import ReactDOM from 'react-dom';
-        import Canape from './src/canape.jsx'; // Canapeコンポーネントのファイルパスを正しく指定
-        
-        // Canapeコンポーネントをルート要素にレンダリング
-        ReactDOM.render(<Canape />, document.getElementById('app'));
-    </script>
-</body>
-</html>-->
