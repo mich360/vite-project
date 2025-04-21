@@ -7,8 +7,8 @@
     <title>Vite-Project</title>
     <style>
        #img{
-        margin-right: 1px;
-        float: right;
+        /* margin-right: 1px; */
+        /* float: right; */
       }
     </style>
     
@@ -25,12 +25,10 @@
       </nav>
     </header>
     <p id="datetime">現在の日時: Loading...</p>
-    
     <!-- 画像を表示する img タグ -->
     <div id="img">
       <img src="./public/images/fuzi.JPG" alt="fuzi Image">
     </div>
-    
     <h1>Vite-Indx-page</h1>
     <span>JavaScript を使用して、Node.jsとViteで簡単にプロジェクト作成しよう</span>
      <!-- 新しいページへのリンクを追加 -->
@@ -55,7 +53,7 @@
     </p>
     <div id="root"></div>
     
-    <script type="module" src="./src/main.jsx"></script>
+    
     <script>
       // JavaScript を使用して日時を取得
       const currentDate = new Date();
@@ -66,7 +64,8 @@
       datetimeElement.textContent = `現在の日時: ${formattedDate}`;
     </script>
     
-
+ <!-- React エントリポイント -->
+ <script type="module" src="/src/main.jsx"></script>
    
   </body>
 </html>
