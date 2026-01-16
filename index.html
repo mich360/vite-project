@@ -2,71 +2,14 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite-Project</title>
-    <style>
-      body{
-        background-color: rgb(208, 224, 236)
-      }
-       /*#img{*/
-        /* margin-right: 1px; */
-        /* float: right; */
-      /*}*/
-    </style>
-    
   </head>
   <body>
-    <header>
-      <nav>
-        <span>Home</span>
-          &emsp;<a href="canape.html">canape</a>&emsp;|
-          &emsp;<a href="start.html">start</a>&emsp;|
-          &emsp;<a href="vite.html">Node.jsとViteプロジェクト作成</a>&emsp;|
-      </nav>
-    </header>
-    <p id="datetime">現在の日時: Loading...</p>
-    <!-- 画像を表示する img タグ -->
-    <div id="img">
-      <img src="./public/images/fuzi.JPG" alt="fuzi Image">
-    </div>
-    <h1>Vite-Indx-page</h1>
-    <span>JavaScript を使用して、Node.jsとViteで簡単にプロジェクト作成しよう</span>
-     <!-- 新しいページへのリンクを追加 -->
-             <h3>アンカータグ</h3>
-    <span>内部リンク<a id="canape" href="canape.html">Go to p-canape Page</a></span>
-    <br><span>外部リンク<a href="https://canape2020.stars.ne.jp/">Canapeでお寛ぎ!</a></span>
-    <br><span>プロジェクト作成<a href="vite.html">Node.jsとViteプロジェクト作成</a></span>
-<p>ここは
-      <br>Webサイト制作ではおなじみのindex.htmlファイルですね。
-      <br>Projectを開くとWebサイトの最初のページが表示されます。Webページの title や言語の指定はこちらから書き換えます。
-    　<br>参考記事<a href="https://www.webcreatorbox.com/tech/vite-react">https://www.webcreatorbox.com/tech/vite-react</a>
-      <br>VScodeで稼動<code> npm run dev </code>コマンドする。もし<code>  sh: vite: command not found</code>となってたら<code>% npm install --save-dev vite</code>の後再度コマンドする。 
-    </p>
-    <p>以下の枠内はsrc/App.css内の
-      <pre>#root {
-      background-color: rgb(208, 224, 236);
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 2rem;
-      text-align: center;
-    }</pre>が反映してます
-    </p>
+    <!-- React が支配する領域 -->
     <div id="root"></div>
-    
-    
-    <script>
-      // JavaScript を使用して日時を取得
-      const currentDate = new Date();
-      const formattedDate = currentDate.toLocaleString();
 
-      // 日時を表示する要素に挿入
-      const datetimeElement = document.getElementById("datetime");
-      datetimeElement.textContent = `現在の日時: ${formattedDate}`;
-    </script>
-    
- <!-- React エントリポイント -->
- <script type="module" src="/src/main.jsx"></script>
-   
+    <!-- React エントリ -->
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -29,11 +29,9 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   margin: 0;
-  /* display: flex; */
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: rgb(247, 173, 234);
 }
 
 h1 {

@@ -1,17 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-//import App from './App';  このパスはプロジェクト構造に合わせて変更してください
-import './index.css'; // 同様にパスを変更してください
+import './index.css' // ← 全体スタイルが不要なら削除OK
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-
-
-
-
+  </React.StrictMode>
+)
