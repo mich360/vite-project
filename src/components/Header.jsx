@@ -1,14 +1,14 @@
-function Header() {
+import React from 'react'
+
+export default function Header() {
   return (
-    <header>
-      <nav>
-        <span>Home</span>
-        &emsp;<a href="canape.html">canape</a>&emsp;|
-        &emsp;<a href="start.html">start</a>&emsp;|
-        &emsp;<a href="vite.html">Node.jsとViteプロジェクト作成</a>&emsp;|
+    <header style={{ backgroundColor: '#055a7f', padding: '1rem' }}>
+      <nav style={{ display: 'flex', gap: '1rem' }}>
+        <a href="index.html" style={{ color: 'white', textDecoration: 'none' }}>Home</a>
+        <a href="canape.html" style={{ color: 'white', textDecoration: 'none' }}>Canape</a>
+        <a href="start.html" style={{ color: 'white', textDecoration: 'none' }}>Start</a>
+        <a href="vite.html" style={{ color: 'white', textDecoration: 'none' }}>Vite</a>
       </nav>
     </header>
-  );
+  )
 }
-
-export default Header;

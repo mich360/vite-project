@@ -1,71 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
 import Footer from './components/Footer'
 
-function App() {
-  const [count, setCount] = useState(0)
+function Home() {
+  return <p>ここが表示されれば React は正常です</p>
+}
 
+function Canape() {
+  return <p>Canape ページです</p>
+}
+
+function Start() {
+  return <p>Start ページです</p>
+}
+
+function VitePage() {
+  return <p>Vite プロジェクトページです</p>
+}
+
+function App() {
   return (
     <>
-      {/* ページタイトル */}
-      <h1>Vite + React 🚀</h1>
-      <h2>App.jsx page</h2>
+      <Header />
+      <h1 style={{ textAlign: 'center' }}>Test Page</h1>
 
-      {/* 説明 */}
-      <p>
-        こちらは <code>src/App.jsx</code> を編集・保存して
-        <strong> HMR（Hot Module Replacement）</strong> を確認するページです。
-      </p>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/canape" element={<Canape />} />
+        <Route path="/start" element={<Start />} />
+        <Route path="/vite" element={<VitePage />} />
+      </Routes>
 
-      {/* カウンター */}
-      <div className="card">
-        <p>押しボタンカウンター</p>
-        <button onClick={() => setCount((c) => c + 1)}>
-          count: {count}
-        </button>
-
-        <p>
-          リロードなしに変更内容を確認できます。
-          <br />
-          「Hot Module Replacement」
-        </p>
-      </div>
-
-      {/* ロゴ */}
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-
-      <p className="read-the-docs">
-        詳細については、Vite および React のロゴをクリックしてください。
-      </p>
-
-      {/* 外部リンク */}
-      <div className="canape">
-        <p className="read-the-docs">
-          JavaScript のサンプルを見るにはクリックしてください。
-        </p>
-
-        <a
-          href="https://canape2020.stars.ne.jp/script/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src="/canape.png" alt="Canape Image" width={300} />
-        </a>
-      </div>
-
-      <p>ここは App.jsx です</p>
-
-      {/* 👇 共通 Footer */}
       <Footer />
     </>
   )
