@@ -1,89 +1,133 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: Inter, system-ui, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
-  
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: #f5f5f5;
   background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: #242424;
+  color: #ffffff;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* 全体中央コンテンツ */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* ヘッダー */
+header {
+  min-height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  background-color: rgba(5, 90, 127, 0.9);
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* タイトル */
+h1 {
+  text-align: center;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+/* テキスト */
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ナビリンク */
 a {
   font-weight: 500;
   color: #e5e5ef;
-  text-decoration: inherit;
+  text-decoration: none;
+
+  transition: 0.2s;
 }
+
 a:hover {
-  color: #535bf2;
-}
-#canape{color: #535bf2;}
-body {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 0;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  color: #7aa2ff;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
+/* ボタン */
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
+  border: none;
+
+  padding: 12px 20px;
+
+  font-size: 1rem;
+
   background-color: #1a1a1a;
+  color: white;
+
   cursor: pointer;
-  transition: border-color 0.25s;
+
+  transition: 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  background-color: #646cff;
 }
 
-header{
-  min-height: 30px;
-  outline: 3px ridge rgba(5, 90, 127, 0.6);
-  border-radius: 1;
-  width: auto;
-  background-color: rgba(5, 90, 127, 0.6);
- 
+/* Footer */
+footer {
+  margin-top: 50px;
 
+  text-align: center;
+
+  padding: 20px;
+
+  color: #cccccc;
 }
-span{
-  text-align: left;font-size: 30px;
-}
-#jsx{
-  text-align: left;
-  font-size: 40px;
+
+/* スマホ */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
   }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  p {
+    font-size: 1rem;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+
+  header {
+    padding: 12px;
   }
 }
